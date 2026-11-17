@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerformersSongs.Presentation.Pages.AddSongPage"
+             Title="Добавление песни">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="25" Spacing="15">
+
+            <Label Text="Добавление новой песни"
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Название песни"
+                   FontAttributes="Bold" />
+
+            <Entry x:Name="TitleEntry"
+                   Placeholder="Введите название песни" />
+
+            <Label Text="Место в чарте"
+                   FontAttributes="Bold" />
+
+            <Entry x:Name="ChartPositionEntry"
+                   Placeholder="Введите место в чарте"
+                   Keyboard="Numeric" />
+
+            <Label Text="Год выпуска"
+                   FontAttributes="Bold" />
+
+            <Entry x:Name="ReleaseYearEntry"
+                   Placeholder="Введите год выпуска"
+                   Keyboard="Numeric" />
+
+            <Label Text="Продолжительность (чч:мм:сс)"
+                   FontAttributes="Bold" />
+
+            <Entry x:Name="DurationEntry"
+                   Placeholder="Например, 00:04:30" />
+
+            <ActivityIndicator x:Name="LoadingIndicator"
+                               IsVisible="False"
+                               IsRunning="False"
+                               HorizontalOptions="Center"
+                               Color="Blue" />
+
+            <Button x:Name="AddButton"
+                    Text="Добавить песню"
+                    Clicked="OnAddClicked" />
+
+            <Button x:Name="CancelButton"
+                    Text="Отмена"
+                    BackgroundColor="Gray"
+                    TextColor="White"
+                    Clicked="OnCancelClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
